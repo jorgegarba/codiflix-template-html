@@ -1,0 +1,69 @@
+@import 'mixins';
+@import 'variables';
+
+.header {
+	position: fixed;
+	color: $text-white;
+	padding: 1rem 3rem 0 3rem;
+	width: 100%;
+	background: linear-gradient(to bottom, $bg-color, transparent);
+	@include flex-row();
+
+	.header__logo {
+		margin-right: 2rem;
+	}
+	.header__nav {
+		flex: 1;
+		@include flex-row(flex-start, center);
+		.header__links {
+			@include flex-row(flex-start, center);
+			gap: 1.5rem;
+			.header__item {
+				.header__link {
+					font-size: 1.2em;
+					color: $text-white;
+					&:hover {
+						color: $text-white-active;
+					}
+				}
+			}
+		}
+	}
+	.header__buttons {
+		@include flex-row(flex-start, center);
+		gap: 1rem;
+		.header__searchbar {
+			button {
+				@include flex-row(flex-start, center);
+				background-color: transparent;
+				border: none;
+				outline: none;
+				color: $text-white;
+
+				input {
+					color: white;
+					padding: 0.5rem 0;
+					width: 0;
+					border: white 0px solid;
+					border-radius: 5px;
+					outline: none;
+					transition: all 0.5s ease;
+					margin-right: 10px;
+					background-color: rgba(0, 0, 0, 0.5);
+					&:focus {
+						padding: 0.5rem;
+						border-width: 1px;
+						width: 180px;
+					}
+				}
+				&:focus {
+					input {
+						padding: 0.5rem;
+						border-width: 1px;
+						width: 180px;
+					}
+				}
+			}
+		}
+	}
+}

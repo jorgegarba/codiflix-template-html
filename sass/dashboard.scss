@@ -1,0 +1,7 @@
+@import 'globals';
+.dashboard {
+	@import 'variables';
+	@import 'header';
+	@import 'hero';
+	@import 'category';
+}

@@ -1,0 +1,126 @@
+@import 'variables';
+@import 'mixins';
+
+.category {
+	padding-left: 3rem;
+	.category__title {
+		color: $text-white;
+	}
+}
+
+.moviecard {
+	border-radius: 5px;
+
+	max-width: 300px;
+	height: 180px;
+	background-color: #fff;
+	// overflow: hidden;
+	position: relative;
+	color: $text-white;
+	background-color: #fff;
+	transition: overflow 0.5s ease;
+
+	&:hover {
+		cursor: pointer;
+		overflow: unset;
+
+		.moviecard__info {
+			// height: unset;
+			opacity: 1;
+			transform: translate(0, 100%);
+		}
+	}
+	.moviecard__figure {
+		height: 100%;
+		position: relative;
+		border-radius: 5px;
+		overflow: hidden;
+		img {
+			max-width: 100%;
+			min-height: 100%;
+		}
+	}
+	.moviecard__title {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	.moviecard__info {
+		// height: 0;
+
+		background-color: #333;
+		position: absolute;
+		bottom: 0;
+		transform: translate(0, 50%);
+
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		overflow: hidden;
+		transition: all 0.5s ease-in-out;
+		.moviecard__actions {
+			margin-bottom: 8px;
+			padding: 0.5rem 0.5rem;
+			@include flex-row(center, center);
+			gap: 5px;
+			button {
+				i {
+					font-size: 1.2rem;
+				}
+				cursor: pointer;
+				padding: 0.6rem;
+				border: 1px solid #aaa;
+				color: #aaa;
+				background-color: transparent;
+				border-radius: 50%;
+				@include flex-row(center, center);
+				&:last-child {
+					margin-left: auto;
+				}
+				&:hover {
+					border: 1px solid white;
+					color: white;
+				}
+			}
+		}
+	}
+	.moviecard__statistics {
+		padding: 0 0.3rem;
+		font-weight: 500;
+		@include flex-row(space-between);
+		.percent {
+			color: #46d369;
+		}
+		.age {
+			border: 0.5px solid white;
+			padding: 0 0.4rem;
+			border-radius: 2px;
+		}
+		.quality {
+			@include flex-row(center, center);
+			border: 0.5px solid white;
+			padding: 0 0.4rem;
+			border-radius: 2px;
+			font-size: 0.8rem;
+		}
+	}
+	.moviecard__categories {
+		margin-top: 8px;
+		@include flex-row(flex-start);
+		flex-wrap: wrap;
+		padding: 0px 5px;
+		gap: 1rem;
+		.moviecard-category {
+			@include flex-row(space-between, center);
+			&:not(:last-child):after {
+				margin-left: 0.7rem;
+				content: '';
+				display: inline-block;
+				height: 5px;
+				width: 5px;
+				background-color: #666;
+				border-radius: 50%;
+			}
+		}
+	}
+}
