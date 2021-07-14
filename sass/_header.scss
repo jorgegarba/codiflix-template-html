@@ -12,6 +12,24 @@
 	.header__logo {
 		margin-right: 2rem;
 	}
+	.header__mobile {
+		// flex: 1;
+		@include flex-row(flex-start, center);
+		display: none;
+		@media screen and (max-width: 1150px) {
+			display: flex;
+			&:hover + .header__nav {
+				height: auto;
+				top: 80px;
+			}
+		}
+		a {
+			color: $text-white;
+			i {
+				margin-left: 1rem;
+			}
+		}
+	}
 	.header__nav {
 		flex: 1;
 		@include flex-row(flex-start, center);
@@ -28,8 +46,39 @@
 				}
 			}
 		}
+		@media screen and (max-width: 1150px) {
+			&:hover {
+				height: auto;
+				top: 80px;
+			}
+			transition: top 0.5s ease;
+			height: 0;
+			overflow: hidden;
+			position: absolute;
+			left: 200px;
+			top: -180px;
+			.header__links {
+				gap: 0;
+				@include flex-column();
+
+				border-top: 2px solid white;
+
+				.header__item {
+					font-size: 0.9rem;
+					padding: 0.5rem 0.5rem;
+					background-color: rgba(0, 0, 0, 0.8);
+					width: 100%;
+					text-align: center;
+					&:hover {
+						background-color: rgba(40, 40, 40, 0.9);
+						cursor: pointer;
+					}
+				}
+			}
+		}
 	}
 	.header__buttons {
+		margin-left: auto;
 		@include flex-row(flex-start, center);
 		gap: 1rem;
 		.header__searchbar {

@@ -1,0 +1,166 @@
+.modal .modal__banner {
+  min-height: 50vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), to(black)), url("./../images/bg-hero.jpg");
+  background-image: linear-gradient(to bottom, transparent 60%, black), url("./../images/bg-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.modal .modal__info {
+  min-height: 50vh;
+  padding-top: 15rem;
+  padding-left: 3em;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0.6)), to(transparent));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6) 30%, transparent);
+  color: #dcdcdc;
+}
+.modal .modal__info .modal__title {
+  margin-bottom: 1rem;
+}
+.modal .modal__info .modal__buttons {
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: "flex-start";
+      -ms-flex-pack: "flex-start";
+          justify-content: "flex-start";
+  -webkit-box-align: "stretch";
+      -ms-flex-align: "stretch";
+          align-items: "stretch";
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.modal .modal__info .modal__buttons button.play {
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.modal .modal__info .modal__buttons button.play i {
+  margin-right: 0.5em;
+}
+.modal .modal__info .modal__buttons button.play:hover {
+  background-color: #c6c5c3;
+}
+.modal .modal__info .modal__buttons button.play.play {
+  margin-right: 0.7em;
+}
+.modal .modal__info .modal__buttons button.action {
+  margin-right: 5px;
+  cursor: pointer;
+  padding: 0.6rem;
+  border: 1px solid #aaa;
+  color: #aaa;
+  background-color: transparent;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.modal .modal__info .modal__buttons button.action i {
+  font-size: 1.2rem;
+}
+.modal .modal__info .modal__buttons button.action:hover {
+  border: 1px solid white;
+  color: white;
+}
+.modal .modal__info .modal__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: "flex-start";
+      -ms-flex-pack: "flex-start";
+          justify-content: "flex-start";
+  -webkit-box-align: "stretch";
+      -ms-flex-align: "stretch";
+          align-items: "stretch";
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.modal .modal__info .modal__row .modal__text {
+  -webkit-box-flex: 70%;
+      -ms-flex: 70%;
+          flex: 70%;
+}
+.modal .modal__info .modal__row .modal__text .modal__statistics {
+  margin-bottom: 1.5rem;
+  padding: 0 0.3rem;
+  font-weight: 500;
+  gap: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: "flex-start";
+      -ms-flex-pack: "flex-start";
+          justify-content: "flex-start";
+  -webkit-box-align: "stretch";
+      -ms-flex-align: "stretch";
+          align-items: "stretch";
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.modal .modal__info .modal__row .modal__text .modal__statistics .percent {
+  color: #46d369;
+}
+.modal .modal__info .modal__row .modal__text .modal__statistics .age {
+  border: 0.5px solid white;
+  padding: 0 0.4rem;
+  border-radius: 2px;
+}
+.modal .modal__info .modal__row .modal__text .modal__statistics .quality {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 0.5px solid white;
+  padding: 0 0.4rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+}
+.modal .modal__info .modal__row .modal__text .modal__overview {
+  line-height: 1.5em;
+  margin-bottom: 2em;
+}
+.modal .modal__info .modal__row .modal__fields {
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+}
+.modal .modal__info .modal__row .modal__fields .modal__cast {
+  margin-bottom: 0.5rem;
+}
+.modal .modal__info .modal__row .modal__fields .modal__cast .field {
+  color: #888;
+  font-size: 0.8rem;
+}
+.modal .modal__info .modal__row .modal__fields .modal__cast .value {
+  color: #dcdcdc;
+}

@@ -17,9 +17,15 @@ ul {
 body {
   background-color: #141414;
   font-family: "Inter", sans-serif;
-  padding-bottom: 10rem;
 }
 
+button {
+  font-family: "Inter", sans-serif;
+}
+
+.dashboard {
+  padding-bottom: 10rem;
+}
 .dashboard .header {
   position: fixed;
   color: #dcdcdc;
@@ -43,6 +49,39 @@ body {
 }
 .dashboard .header .header__logo {
   margin-right: 2rem;
+}
+.dashboard .header .header__mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: none;
+}
+@media screen and (max-width: 1150px) {
+  .dashboard .header .header__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .dashboard .header .header__mobile:hover + .header__nav {
+    height: auto;
+    top: 80px;
+  }
+}
+.dashboard .header .header__mobile a {
+  color: #dcdcdc;
+}
+.dashboard .header .header__mobile a i {
+  margin-left: 1rem;
 }
 .dashboard .header .header__nav {
   -webkit-box-flex: 1;
@@ -85,7 +124,52 @@ body {
 .dashboard .header .header__nav .header__links .header__item .header__link:hover {
   color: white;
 }
+@media screen and (max-width: 1150px) {
+  .dashboard .header .header__nav {
+    -webkit-transition: top 0.5s ease;
+    transition: top 0.5s ease;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 200px;
+    top: -180px;
+  }
+  .dashboard .header .header__nav:hover {
+    height: auto;
+    top: 80px;
+  }
+  .dashboard .header .header__nav .header__links {
+    gap: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: "flex-start";
+        -ms-flex-pack: "flex-start";
+            justify-content: "flex-start";
+    -webkit-box-align: "stretch";
+        -ms-flex-align: "stretch";
+            align-items: "stretch";
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    flex-direction: column;
+    border-top: 2px solid white;
+  }
+  .dashboard .header .header__nav .header__links .header__item {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    text-align: center;
+  }
+  .dashboard .header .header__nav .header__links .header__item:hover {
+    background-color: rgba(40, 40, 40, 0.9);
+    cursor: pointer;
+  }
+}
 .dashboard .header .header__buttons {
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
